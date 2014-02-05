@@ -28,7 +28,7 @@ def server_status(url):
     resp = cn.getresponse()
     if resp.status != 200:
         cn.close()
-        raise ValueError('HTTP %s received from %s.' % (response.status, url))
+        raise ValueError('HTTP %s received from %s.' % (resp.status, url))
     raw = resp.read()
     cn.close()
 
